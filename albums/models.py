@@ -3,7 +3,10 @@ from django.utils import timezone
 
 # Create your models here.
 class Album(models.Model):
-    title = models.CharField(max_length=100, null=True, blank=True)
-    artist = models.CharField(max_length=100, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-    
+    title = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+        
