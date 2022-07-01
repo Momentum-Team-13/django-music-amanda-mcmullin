@@ -3,6 +3,7 @@
 {% block content %}
 <h2>All Albums</h2>
 
+<p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div class="flex flex-wrap">
     {% for album in albums %}
@@ -12,7 +13,14 @@
             <div class="pr2"><i class="icofont-artist"></i></div>
             <div>{{ album.artist }}</div>
         </div>
+
+        <p>
+            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+            <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
+            <a href="{% url 'view_album' pk=album.pk %}">View Album</a><br>
+        </p>
     </div>
     {% endfor %}
+
 </div>
 {% endblock %}
