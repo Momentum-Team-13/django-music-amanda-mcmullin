@@ -27,6 +27,8 @@ urlpatterns = [
     path('albums/<int:pk>/', albums_views.view_album, name='view_album'),
 ]
 
+
+#debug toolbar
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
