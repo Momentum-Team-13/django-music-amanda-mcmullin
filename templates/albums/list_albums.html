@@ -14,6 +14,9 @@
         <h4>{{ album.title }}</h4>
         <div>{{ album.artist }}</div>
 
+    {% if album in favorite_albums %}
+    <h2>FAVORITE</h2>
+    {% endif %}
 
         <p>
             <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
