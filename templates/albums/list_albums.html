@@ -12,11 +12,8 @@
     {% for album in albums %}
     <div class="album">
         <h4>{{ album.title }}</h4>
-        <div class="flex">
-            <div class="pr2"><i class="icofont-artist"></i></div>
-            <div>{{ album.artist }}</div>
-        </div>
-        
+        <div>{{ album.artist }}</div>
+
 
         <p>
             <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
