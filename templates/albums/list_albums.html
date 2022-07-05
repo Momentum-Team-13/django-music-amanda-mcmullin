@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome to Your Music Collection!</h1>
+
+<p><a href="{% url 'add_album' %}">Add New Album</a></p>
+
+<h2>All Albums</h2>
+
+<div class="flex flex-wrap">
+    {% for album in albums %}
+    <div class="album">
+        <h4>{{ album.title }}</h4>
+        <div class="flex">
+            <div class="pr2"><i class="icofont-artist"></i></div>
+            <div>{{ album.artist }}</div>
+        </div>
+        
+
+        <p>
+            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+            <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
+            <a href="{% url 'view_album' pk=album.pk %}">View Album</a><br>
+        </p>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
