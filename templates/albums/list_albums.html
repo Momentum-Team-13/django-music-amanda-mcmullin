@@ -2,9 +2,11 @@
 
 {% block content %}
 
-<h1>Welcome to Your Music Collection!</h1>
+<h1>Welcome to Your Music Collection!</h1><br>
 
-<p><a href="{% url 'add_album' %}">Add New Album</a></p>
+<div>
+<p><a class="greeting" href="{% url 'add_album' %}">Add New Album</a></p>
+</div>
 
 <h2>All Albums</h2>
 

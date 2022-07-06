@@ -11,23 +11,24 @@ h2 {
     text-align: center;
 }
 
-h3 {
-    margin-bottom: 1px;
-}
+/* .greeting {
+    text-align: left;
+    justify-content: left;
+    border: solid fuchsia 2px;
+} 
 
-h4 {
-    margin-bottom: 1px;
-}
-
-div {
-    display: grid;
+.music {
+    width: auto;
+    height: auto;
     justify-content: center;
-    max-width: fit-content;
-}
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
 
 .album {
-    border: 1px solid black;
-    max-width: 15%;
+    border: solid black 2px;
+    max-width: 20%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -36,13 +37,3 @@ div {
     padding: 5px;
     font-size: smaller;
 }
-
-.music {
-    width: auto;
-    height: auto; 
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-

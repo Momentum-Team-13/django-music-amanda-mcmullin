@@ -3,22 +3,22 @@
 {% block content %}
 <h2>Album</h2>
 
-<div class="flex flex-wrap">
-    <div class="w-33 pa3">
-        <h3>{{ album.title }}</h3>
-        <div>
-            <div>{{ album.artist }}</div>
-            <div>Added to your collection on: {{ album.created_at }}</div>
-            <br>
-            <br>
-        </div>
+<div>
+    <div class="album_info">
+    <h3>{{ album.title }}</h3>
+    <div>
+        <div>{{ album.artist }}</div>
+        <div>Added to your collection on: {{ album.created_at }}</div>
+        <br>
+        <br>
+    </div>
 
 
-        <p>
-            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
-            <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
-            <a href="{% url 'list_albums' %}">All Albums</a><br>
-        </p>
+    <p>
+        <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+        <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
+        <a href="{% url 'list_albums' %}">All Albums</a><br>
+    </p>
 
     </div>
 </div>

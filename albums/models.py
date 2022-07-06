@@ -11,7 +11,6 @@ class Album(models.Model):
     def __str__(self):
         return self.title
 
-
     def check_is_user_favorite(self, user):
         for favorite in self.favorites.all():
             if favorite.album == self:
