@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <h1>Welcome to Your Music Collection!</h1><br>
 
 <div>
@@ -12,6 +11,7 @@
     <h2 class="view_all">Now Vieweing All Albums</h2>
     <br>
     <br>
+
     <div class="collection">
         {% for album in albums %}
         <div class="album">
@@ -29,6 +29,7 @@
             </p>
         </div>
         {% endfor %}
-    </div>
+    </div>    
 </div>
+
 {% endblock %}
