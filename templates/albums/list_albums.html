@@ -5,28 +5,30 @@
 <h1>Welcome to Your Music Collection!</h1><br>
 
 <div>
-<p><a class="greeting" href="{% url 'add_album' %}">Add New Album</a></p>
+    <p><a class="greeting" href="{% url 'add_album' %}">Add New Album</a></p>
 </div>
 
-<h2>All Albums</h2>
+<div>
+    <h2 class="view_all">Now Vieweing All Albums</h2>
+    <br>
+    <br>
+    <div class="collection">
+        {% for album in albums %}
+        <div class="album">
+            <h4>{{ album.title }}</h4>
+            <div>{{ album.artist }}</div>
 
-<div class="flex flex-wrap">
-    {% for album in albums %}
-    <div class="album">
-        <h4>{{ album.title }}</h4>
-        <div>{{ album.artist }}</div>
+            {% if album in favorite_albums %}
+            <h3>One of my faves! ❤️ </h3>
+            {% endif %}
 
-    {% if album in favorite_albums %}
-    <h2>FAVORITE</h2>
-    {% endif %}
-
-        <p>
-            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
-            <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
-            <a href="{% url 'view_album' pk=album.pk %}">View Album</a><br>
-        </p>
+            <p>
+                <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+                <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a><br>
+                <a href="{% url 'view_album' pk=album.pk %}">View Album</a><br>
+            </p>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-
 </div>
 {% endblock %}

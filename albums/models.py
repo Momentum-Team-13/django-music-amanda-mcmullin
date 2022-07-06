@@ -24,5 +24,5 @@ class Favorite(models.Model):
     album = models.ForeignKey("Album", on_delete=models.CASCADE, related_name="favorites")
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title

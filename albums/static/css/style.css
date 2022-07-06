@@ -11,29 +11,35 @@ h2 {
     text-align: center;
 }
 
-/* .greeting {
+.view_all {
+    text-align: center;
+}
+
+.greeting {
     text-align: left;
     justify-content: left;
-    border: solid fuchsia 2px;
-} 
+}
 
-.music {
+
+.collection {
     width: auto;
     height: auto;
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-} */
+    padding-top: 15px;
+    max-width: fit-content;
+}
 
 .album {
     border: solid black 2px;
-    max-width: 20%;
+    max-width: 45%;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #fae1dd;
     margin: 40px 15px 15px 15px;
-    padding: 5px;
+    padding: 45px;
     font-size: smaller;
 }
