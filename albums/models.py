@@ -23,3 +23,6 @@ class Favorite(models.Model):
     user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="favorites")
     album = models.ForeignKey("Album", on_delete=models.CASCADE, related_name="favorites")
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user}: {self.album}"

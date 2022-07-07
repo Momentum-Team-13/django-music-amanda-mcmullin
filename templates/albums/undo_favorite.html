@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Undo Favorite</h1>
+
+{% if album in favorite_albums %}
+<p> <a href="{% url 'undo_favorite' pk=album.pk %}"> &#11088; Undo Favorite </a>
+{% endif %}
+
+{% endblock %}

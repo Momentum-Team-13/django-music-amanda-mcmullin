@@ -13,6 +13,7 @@ class AlbumForm(forms.ModelForm):
 
 class FavoriteForm(forms.ModelForm):
     class Meta:
+        model = Favorite
         fields = [
             'user',
             'album',

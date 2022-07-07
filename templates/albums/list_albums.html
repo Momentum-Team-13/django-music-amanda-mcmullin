@@ -8,7 +8,7 @@
 </div>
 
 <div>
-    <h2 class="view_all">Now Vieweing All Albums</h2>
+    <h2 class="view_all">All Albums</h2>
     <br>
     <br>
 
@@ -19,7 +19,10 @@
             <div>{{ album.artist }}</div>
 
             {% if album in favorite_albums %}
-            <h3>One of my faves! ❤️ </h3>
+            <p> <a href="{% url 'undo_favorite' pk=album.pk %}"> &#11088; Undo Favorite </a>
+                {% else %}
+                <a href="{% url 'add_favorite' pk=album.pk %}"> &#9734; Add to Favorites</a>
+            </p>
             {% endif %}
 
             <p>
@@ -29,7 +32,7 @@
             </p>
         </div>
         {% endfor %}
-    </div>    
+    </div>
 </div>
 
 {% endblock %}

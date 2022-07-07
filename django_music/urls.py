@@ -25,6 +25,8 @@ urlpatterns = [
     path('albums/<int:pk>/edit/', albums_views.edit_album, name='edit_album'),
     path('albums/<int:pk>/delete/', albums_views.delete_album, name='delete_album'),
     path('albums/<int:pk>/', albums_views.view_album, name='view_album'),
+    path('albums/<int:pk>/favorite/', albums_views.add_favorite, name="add_favorite"),
+    path('albums/<int:pk>/undo_favorite/', albums_views.undo_favorite, name="undo_favorite"),
 ]
 
 
